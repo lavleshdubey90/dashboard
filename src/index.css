@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Quicksand", serif;
+}
+
+@layer utilities {
+  .input {
+    @apply border w-full px-4 font-medium text-zinc-500 placeholder:text-zinc-300 py-2 rounded-md outline-offset-0 outline-none duration-300 focus:outline-sky-500;
+  }
+}
