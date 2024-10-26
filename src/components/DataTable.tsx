@@ -1,7 +1,12 @@
 import React from 'react';
-import { attendees, Attendee } from '../data/attendeesData';
+import { useSelector } from 'react-redux';
+import { RootState } from '../store/store'; // Adjust this import according to your structure
+import { Attendee } from '../data/attendeesData';
 
 const DataTable: React.FC = () => {
+  const filteredList = useSelector((state: RootState) => state.attendees.filteredList);
+  const rowsToShow = useSelector((state: RootState) => state.attendees.filters.rows);
+
   return (
     <div className='px-5'>
       <table className="table-auto w-full overflow-y-scroll text-left">
@@ -19,9 +24,9 @@ const DataTable: React.FC = () => {
 
         <tbody>
           {
-            attendees.map((attendee: Attendee, index:number) => (
+            filteredList.slice(0, rowsToShow).map((attendee:Attendee, index:number) => (
               <tr key={attendee.email} className='border rounded-md font-medium text-zinc-700'>
-                <td className='py-3 px-5'>{index+1}</td>
+                <td className='py-3 px-5'>{index + 1}</td>
                 <td className='py-3 px-5'>{attendee.name}</td>
                 <td className='py-3 px-5'>{attendee.designation}</td>
                 <td className='py-3 px-5'>{attendee.company}</td>
