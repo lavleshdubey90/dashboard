@@ -1,4 +1,4 @@
-interface Attendee {
+export interface Attendee {
     name: string;
     designation: string;
     email: string;
@@ -8,7 +8,7 @@ interface Attendee {
     checkedIn: 'yes' | 'no';
 }
 
-const attendees: Attendee[] = [
+export const attendees: Attendee[] = [
     { name: "Alice Johnson", designation: "CEO", email: "alice.johnson@example.com", company: "Tech Innovations", mobile: "123-456-7890", role: "speaker", checkedIn: "yes" },
     { name: "Bob Smith", designation: "Marketing Manager", email: "bob.smith@example.com", company: "Creative Agency", mobile: "123-456-7891", role: "delegate", checkedIn: "no" },
     { name: "Charlie Brown", designation: "CTO", email: "charlie.brown@example.com", company: "Future Tech", mobile: "123-456-7892", role: "speaker", checkedIn: "yes" },
@@ -62,5 +62,3 @@ const attendees: Attendee[] = [
     { name: "Yvonne Baker", designation: "Program Manager", email: "yvonne.baker@example.com", company: "Program Partners", mobile: "123-456-7840", role: "moderator", checkedIn: "no" },
     { name: "Zara Hunter", designation: "Compliance Officer", email: "zara.hunter@example.com", company: "Compliance Co", mobile: "123-456-7841", role: "sponsor", checkedIn: "yes" },
 ];
-
-export default attendees;
