@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar:React.FC = () => {
   return (
-    <header className='w-full p-5'>
+    <header className='w-full sticky top-0 bg-white/90 backdrop-blur-sm z-50 p-5'>
         <nav className='flex justify-between items-center'>
             <h3 className='text-2xl text-sky-500 font-extrabold'>Dashboard</h3>
             <div className='flex items-center gap-2'>

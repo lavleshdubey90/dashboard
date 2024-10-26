@@ -1,20 +1,33 @@
 import React from 'react';
-// import Login from './pages/login';
+import { Route, Routes } from 'react-router-dom';
+import Login from './pages/login';
 import Dashboard from './pages/dashboard';
-// import { Route, Routes } from 'react-router-dom';
+import Events from './pages/events';
+import AllEvents from './pages/allEvents';
+import AddEvents from './pages/addEvents';
+import Attendees from './pages/attendees';
+import Sponsers from './pages/sponsers';
+import Settings from './pages/settings';
+import Profile from './pages/profile';
 
 const App: React.FC = () => {
   return (
-    <div>
-      {/* <Login /> */}
-      <Dashboard />
-      {/* <h1 className='text-3xl font-bold text-yellow-500'>Hello World</h1>
-
+    <>
       <Routes>
+        {/* <Route path="/" element={<Login />} /> */}
+        <Route path="/" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
-      </Routes> */}
-    </div>
-  )
+        <Route path="/dashboard" element={<Dashboard />} />
+        {/* <Route path="/events" element={<Events />} /> */}
+        <Route path="/events/allevents" element={<AllEvents />} />
+        <Route path="/events/addevents" element={<AddEvents />} />
+        <Route path="/attendees" element={<Attendees />} />
+        <Route path="/sponsors" element={<Sponsers />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
