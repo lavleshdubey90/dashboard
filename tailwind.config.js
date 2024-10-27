@@ -12,6 +12,7 @@ export default {
   ],
 
   daisyui: {
-    darkTheme: "light", // name of one of the included themes for dark mode
+    darkTheme: "light",
+    styled: true
   },
 }

@@ -3,16 +3,16 @@ import Sidebar from '../../components/Sidebar';
 import Navbar from '../../components/Navbar';
 import EventRow from '../../components/EventRow';
 import { allEvents } from '../../data/eventsData';
-import { Event } from '../../data/eventsData';
 
 const AllEvents: React.FC = () => {
   const [active, setActive] = useState<string>("upcoming");
   const currentDate = Date.now();
 
-  // Filter upcoming and passed events
+  
   const upcomingEvents = allEvents.filter(event => new Date(event.date).getTime() > currentDate);
   const passedEvents = allEvents.filter(event => new Date(event.date).getTime() <= currentDate);
-
+  console.log(upcomingEvents, passedEvents);
+  
   return (
     <section className='flex'>
       <Sidebar />

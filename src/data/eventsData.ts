@@ -11,13 +11,13 @@ export interface Event {
     title: string;
     location: string;
     date: string;
-    time: string; // New property
-    venue: string; // New property
-    totalRegistrations: number; // New property
-    totalAttendees: number; // New property
-    checkedInSpeakers: number; // New property
-    checkedInSponsors: number; // New property
-    pendingDelegates: number; // New property
+    time: string;
+    venue: string;
+    totalRegistrations: number;
+    totalAttendees: number;
+    checkedInSpeakers: number;
+    checkedInSponsors: number;
+    pendingDelegates: number;
 }
 
 export const allEvents: Event[] = [

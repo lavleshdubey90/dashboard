@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '../store/store'; // Adjust this import according to your structure
+import { RootState } from '../store/store';
 import { Attendee } from '../data/attendeesData';
 
 const DataTable: React.FC = () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Event } from '../data/eventsData';
 
 interface EventRowProps {
-    event: Event; // Accept the event prop here
+    event: Event;
 }
 
 const EventRow: React.FC<EventRowProps> = ({ event }) => {

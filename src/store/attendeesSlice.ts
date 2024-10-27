@@ -39,7 +39,7 @@ const attendeesSlice = createSlice({
             (state.filters.company ? attendee.company.toLowerCase().includes(state.filters.company.toLowerCase()) : true) &&
             (state.filters.designation ? attendee.designation.toLowerCase().includes(state.filters.designation.toLowerCase()) : true) &&
             (state.filters.checkedIn ? 
-              attendee.checkedIn.toLowerCase() === state.filters.checkedIn.toLowerCase() : true // Ensure both sides are compared as strings
+              attendee.checkedIn.toLowerCase() === state.filters.checkedIn.toLowerCase() : true
             ) &&
             (state.filters.role ? attendee.role.toLowerCase() === state.filters.role.toLowerCase() : true)
           );

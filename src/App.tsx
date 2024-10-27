@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Login from './pages/login';
 import Dashboard from './pages/dashboard';
-import Events from './pages/events';
 import AllEvents from './pages/allEvents';
 import AddEvents from './pages/addEvents';
 import Attendees from './pages/attendees';
@@ -14,8 +13,7 @@ const App: React.FC = () => {
   return (
     <>
       <Routes>
-        {/* <Route path="/" element={<Login />} /> */}
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         {/* <Route path="/events" element={<Events />} /> */}
